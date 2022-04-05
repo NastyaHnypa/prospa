@@ -1,0 +1,186 @@
+.filters {
+    width: 256px;
+    overflow: hidden;
+    position: sticky;
+    flex-shrink: 0;
+    top: 14px;
+    margin: 6px -8px 41px 56px;
+
+    .filters-content {
+        width: 256px;
+        position: relative;
+
+        .dropdown {
+            width: 100%;
+            margin-top: 20px;
+
+            .head {
+                width: 100%;
+                cursor: pointer;
+                @include flex(r, sb, c);
+                padding: 0 8px;
+
+                p {
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 32px;
+                    text-transform: uppercase;
+                }
+
+                svg {
+                    @include trans(transform);
+                }
+
+            }
+
+
+            .body {
+                height: auto;
+                overflow: hidden;
+                @include trans(height);
+
+                .field {
+                    @include flex(r, fs, c);
+                    padding: 6px 0;
+                    position: relative;
+
+                    .like_a_label {
+                        @include flex(r, sb, c);
+                        color: #9a9999;
+                        font-size: 13px;
+                        padding: 0 25px 0 10px;
+                        flex-grow: 1;
+                        cursor: pointer;
+                    }
+                }
+                [data-show-all] {
+                    @include trans(height);
+                    height: 24px;
+                    overflow: hidden;
+                }
+            }
+
+            &.collapsed {
+
+                .head {
+                    svg {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    @include flex(r, fs, c);
+    width: 100%;
+    border-radius: 10px;
+    padding: 8px;
+    @include trans();
+    transition-property: background, height, padding;
+    overflow: hidden;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        display: none;
+        z-index: -10000000000;
+    }
+
+    .checkmark {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #CFD4DA;
+        border-radius: 5px;
+        margin-right: 8px;
+        display: block;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+    }
+
+    input:checked~.checkmark {
+        background-color: $active;
+
+        &::after {
+            display: block;
+        }
+    }
+
+    p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include trans(color);
+    }
+
+
+    &:not(.disabled):hover {
+        background: #F4F7FD;
+
+        .checkmark {
+            border-color: $active_border;
+        }
+
+        p {
+            color: $active;
+        }
+
+        input:checked {
+            &~.checkmark {
+                background-color: $active;
+            }
+
+            &~p {
+                color: $color-text;
+            }
+        }
+
+    }
+
+    &.disabled {
+        cursor: default;
+        .checkmark {
+            background-color: transparent;
+
+            border-color: #CFD4DA;
+            &::after {
+                display: none;
+            }
+        }
+        p {
+            color: #AFB3BB;
+        }
+    }
+    
+    &.hide {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

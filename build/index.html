@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+
+  <!--- Basic Page Needs
+  ================================================== -->
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Favicons
+	================================================== -->
+  <!-- <link rel="shortcut icon" href="img/favicon.png" /> -->
+
+</head>
+
+
+  <body>
+    <main>
+      <header>
+    <div class="container">
+        <div class="header-container__left">
+            <a href="/" class="logo">
+                
+                    <svg width="96" height="19" viewBox="0 0 96 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.8 1.2C8.448 1.2 9.84 1.76 10.976 2.88C12.112 4 12.68 5.36 12.68 6.96C12.68 8.56 12.112 9.92 10.976 11.04C9.84 12.16 8.448 12.72 6.8 12.72H4.28V18H0.44V1.2H6.8ZM6.8 9.12C7.392 9.12 7.88 8.912 8.264 8.496C8.648 8.08 8.84 7.568 8.84 6.96C8.84 6.352 8.648 5.84 8.264 5.424C7.88 5.008 7.392 4.8 6.8 4.8H4.28V9.12H6.8ZM23.4283 18L20.2603 12.48H18.4363V18H14.5963V1.2H21.3163C22.9163 1.2 24.2763 1.76 25.3963 2.88C26.5163 4 27.0763 5.36 27.0763 6.96C27.0763 7.984 26.7883 8.936 26.2123 9.816C25.6523 10.68 24.9083 11.352 23.9803 11.832L27.5563 18H23.4283ZM18.4363 4.8V9.12H21.3163C21.8443 9.12 22.2923 8.912 22.6603 8.496C23.0443 8.08 23.2363 7.568 23.2363 6.96C23.2363 6.352 23.0443 5.84 22.6603 5.424C22.2923 5.008 21.8443 4.8 21.3163 4.8H18.4363ZM43.3355 15.816C41.6395 17.496 39.5755 18.336 37.1435 18.336C34.7115 18.336 32.6475 17.496 30.9515 15.816C29.2555 14.136 28.4075 12.064 28.4075 9.6C28.4075 7.136 29.2555 5.064 30.9515 3.384C32.6475 1.704 34.7115 0.863999 37.1435 0.863999C39.5755 0.863999 41.6395 1.704 43.3355 3.384C45.0315 5.064 45.8795 7.136 45.8795 9.6C45.8795 12.064 45.0315 14.136 43.3355 15.816ZM33.6395 13.2C34.5835 14.128 35.7515 14.592 37.1435 14.592C38.5355 14.592 39.6955 14.128 40.6235 13.2C41.5675 12.272 42.0395 11.072 42.0395 9.6C42.0395 8.128 41.5675 6.928 40.6235 6C39.6955 5.072 38.5355 4.608 37.1435 4.608C35.7515 4.608 34.5835 5.072 33.6395 6C32.7115 6.928 32.2475 8.128 32.2475 9.6C32.2475 11.072 32.7115 12.272 33.6395 13.2ZM59.9216 18.336C58.2096 18.336 56.7776 17.968 55.6256 17.232C54.4896 16.48 53.6816 15.464 53.2016 14.184L56.5136 12.264C57.1856 13.816 58.3616 14.592 60.0416 14.592C61.5616 14.592 62.3216 14.136 62.3216 13.224C62.3216 12.728 62.0736 12.344 61.5776 12.072C61.0976 11.784 60.1856 11.456 58.8416 11.088C58.1376 10.896 57.5216 10.68 56.9936 10.44C56.4656 10.2 55.9456 9.888 55.4336 9.504C54.9376 9.104 54.5536 8.608 54.2816 8.016C54.0256 7.424 53.8976 6.744 53.8976 5.976C53.8976 4.424 54.4496 3.184 55.5536 2.256C56.6736 1.328 58.0016 0.863999 59.5376 0.863999C60.9136 0.863999 62.1296 1.192 63.1856 1.848C64.2416 2.488 65.0736 3.424 65.6816 4.656L62.4416 6.552C62.1376 5.912 61.7616 5.432 61.3136 5.112C60.8656 4.776 60.2736 4.608 59.5376 4.608C58.9616 4.608 58.5136 4.736 58.1936 4.992C57.8896 5.232 57.7376 5.528 57.7376 5.88C57.7376 6.296 57.9296 6.656 58.3136 6.96C58.7136 7.264 59.5296 7.6 60.7616 7.968C61.4336 8.176 61.9536 8.344 62.3216 8.472C62.6896 8.6 63.1536 8.816 63.7136 9.12C64.2896 9.408 64.7216 9.72 65.0096 10.056C65.3136 10.376 65.5776 10.808 65.8016 11.352C66.0416 11.88 66.1616 12.488 66.1616 13.176C66.1616 14.776 65.5856 16.04 64.4336 16.968C63.2816 17.88 61.7776 18.336 59.9216 18.336ZM74.3234 1.2C75.9714 1.2 77.3634 1.76 78.4994 2.88C79.6354 4 80.2034 5.36 80.2034 6.96C80.2034 8.56 79.6354 9.92 78.4994 11.04C77.3634 12.16 75.9714 12.72 74.3234 12.72H71.8034V18H67.9634V1.2H74.3234ZM74.3234 9.12C74.9154 9.12 75.4034 8.912 75.7874 8.496C76.1714 8.08 76.3634 7.568 76.3634 6.96C76.3634 6.352 76.1714 5.84 75.7874 5.424C75.4034 5.008 74.9154 4.8 74.3234 4.8H71.8034V9.12H74.3234ZM91.1122 18L90.2722 15.36H84.0322L83.1922 18H78.9922L84.7042 1.2H89.6002L95.3122 18H91.1122ZM85.1842 11.76H89.1202L87.1522 5.592L85.1842 11.76Z"
+                            fill="#333333" />
+                    </svg>
+                
+            </a>
+            <div class="header-links">
+                <div class="link active">
+                    <a href="#">Сауны</a>
+                </div>
+                <div class="link">
+                    <a href="#">Бани</a>
+                </div>
+                <div class="link">
+                    <a href="#">Хаммамы</a>
+                </div>
+                <div class="link">
+                    <a href="#">Бассейны</a>
+                </div>
+                <div class="link">
+                    <a href="#">SPA-кмоплексы</a>
+                </div>
+                <div class="link">
+                    <a href="#">Камины</a>
+                </div>
+                <div class="link__more">
+                    <p>Eщё</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6L8 11" stroke="#AFB3BB" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M13 6L8 11" stroke="#AFB3BB" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+        <div class="header-container__right">
+            <div class="icon-container">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.9905 2C12.7945 2 13.4651 2.65177 13.4651 3.45577C13.4651 3.54333 13.4574 3.62909 13.4426 3.71239C16.266 4.36243 18.3713 6.89144 18.3713 9.91218V11.6704L18.3705 11.8815C18.3648 13.2874 18.3576 15.0808 19.5623 15.6123C20.5502 16.0481 20.5474 17.234 20.5456 17.9804L20.5454 18.0701H3.4544L3.45426 17.9804C3.45247 17.234 3.44964 16.0481 4.43752 15.6123C5.64227 15.0808 5.63502 13.2874 5.62935 11.8815L5.62859 11.6704V9.91218C5.62859 6.89144 7.7339 4.36243 10.5573 3.71239C10.5424 3.62909 10.5347 3.54333 10.5347 3.45577C10.5347 2.65177 11.1865 2 11.9905 2Z"
+                        fill="#AFB3BB" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.46753 19.1666C8.86076 20.7519 10.2932 21.9269 12 21.9269C13.7069 21.9269 15.1393 20.7519 15.5326 19.1666H8.46753Z"
+                        fill="#AFB3BB" />
+                </svg>
+            </div>
+            <a class="icon-container">
+                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.65901 0.790811C1.08097 0.284463 1.65326 0 2.25 0H9.75C10.3467 0 10.919 0.284463 11.341 0.790811C11.7629 1.29716 12 1.98391 12 2.7V17.1C12 17.4371 11.843 17.746 11.5932 17.9002C11.3434 18.0545 11.0427 18.0283 10.8141 17.8324L6 13.706L1.18593 17.8324C0.957318 18.0283 0.656617 18.0545 0.406814 17.9002C0.157011 17.746 0 17.4371 0 17.1V2.7C0 1.98392 0.237053 1.29716 0.65901 0.790811Z"
+                        fill="#AFB3BB" />
+                </svg>
+            </a>
+            <button class="bttn-blue">Заказать проект</button>
+            <button class="bttn-gray">Войти</button>
+        </div>
+    </div>
+</header>
+     
+     <section id="catalog">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="#">Печи</a>
+            <a href="#">Элекстрические</a>
+            <p>Harvia</p>
+        </div>
+        <h1>Строительство саун</h1>
+        <div class="catalog-categories">
+            <div class="catalog-cateagories__category-container">
+                <p>Для квартиры</p>
+            </div>
+            <div class="catalog-cateagories__category-container">
+                <p>Для дачи</p>
+            </div>
+            <div class="catalog-cateagories__category-container">
+                <p>Для бизнеса</p>
+            </div>
+            <div class="catalog-cateagories__category-container">
+                <p>Дизайнерские</p>
+            </div>
+            <div class="catalog-cateagories__category-container">
+                <p>Недорогие</p>
+            </div>
+            <div class="catalog-cateagories__category-container">
+                <p>До 40 м</p>
+            </div>
+        </div>
+        <div class="container-sort-filter">
+            <div class="container-sort">
+                <div class="sort active">
+                    <p>Сначала популярные</p>
+                </div>
+                <div class="sort">
+                    <p>Новизна</p>
+                </div>
+                <div class="sort">
+                    <p>Цена</p>
+                </div>
+            </div>
+            <div class="container-filter">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="4" x2="3" y2="4" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <line x1="1" y1="12" x2="5" y2="12" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <line x1="11" y1="4" x2="15" y2="4" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <line x1="13" y1="12" x2="15" y2="12" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <circle cx="5" cy="4" r="2" stroke="#333333" stroke-width="2" />
+                    <circle cx="11" cy="12" r="2" stroke="#333333" stroke-width="2" />
+                </svg>
+                <div class="show-filter">
+                    <p>Показать фильтр</p>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-content">
+
+            <div class="container-products">
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna2.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-count="1">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.5 1C3.46243 1 1 3.46243 1 6.5C1 9.01755 2.6915 11.14 5 11.793V15L8.6 12H9.5C12.5376 12 15 9.53757 15 6.5C15 3.46243 12.5376 1 9.5 1H6.5Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+
+                            </div>
+                            <div class="counter" data-toggle-like data-count="256">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>34 м2</span>
+                        <span>EOS</span>
+                    </p>
+                    <p class="description">Москва, квартира</p>
+                    <p class="description">Твой пар</p>
+                    <div class="label">new</div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna3.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>65 м2</span>
+                        <span>Harvia</span>
+                    </p>
+                    <p class="description">Королев, дом</p>
+                    <p class="description">95 градусов</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna4.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="3">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>65 м2</span>
+                        <span>Harvia</span>
+                        <span>от 1 400 000 ₽</span>
+
+                    </p>
+                    <p class="description">Москва, квартира</p>
+                    <p class="description">95 градусов</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna12.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>65 м2</span>
+                        <span>Harvia Cillindro</span>
+                    </p>
+                    <p class="description">Москва, квартира</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna1.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="65">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>34 м2</span>
+                        <span>IKI</span>
+                        <span>амбарная доска</span>
+                    </p>
+                    <p class="description">Москва, квартира</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna5.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>11 м2</span>
+                        <span>Helo Pikkutonttu</span>
+                    </p>
+                    <p class="description">КП "Нахабино Кантри", дом</p>
+                    <p class="description">95 градусов</p>
+                </div>
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna6.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="125">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>SPA-зона</span>
+                        <span>2000 м2</span>
+                        <span>Klafs</span>
+                    </p>
+                    <p class="description">Москва, Barvikha Hotel & SPA</p>
+                    <p class="description">ASPA</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna12.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>SPA-зона</span>
+                        <span>2000 м2</span>
+                        <span>Klafs</span>
+                    </p>
+
+                    <p class="description">ASPA</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna7.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Травяная сауна</span>
+                        <span>34 м2</span>
+                        <span>Lang Sauna-Therm</span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna8.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Гималайская сауна</span>
+                        <span>65 м2</span>
+                        <span>IKI Pro</span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna9.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="20">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>65 м2</span>
+                        <span>Helo Saunatonttu</span>
+                        <span>от 1 400 000 </span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna10.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Нефритовая сауна</span>
+                        <span>65 м2</span>
+                        <span>IKI</span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna1.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="65">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>34 м2</span>
+                        <span>IKI</span>
+                        <span>амбарная доска</span>
+                    </p>
+                    <p class="description">Москва, квартира</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna5.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>11 м2</span>
+                        <span>Helo Pikkutonttu</span>
+                    </p>
+                    <p class="description">КП "Нахабино Кантри", дом</p>
+                    <p class="description">95 градусов</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna11.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>4 м2</span>
+                        <span>Tylo Compact</span>
+                    </p>
+                    <p class="description">Москва, квартира</p>
+                    <p class="description">95 градусов</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna12.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>SPA-зона</span>
+                        <span>2000 м2</span>
+                        <span>Klafs</span>
+                    </p>
+
+                    <p class="description">ASPA</p>
+                </div>
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna7.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Травяная сауна</span>
+                        <span>34 м2</span>
+                        <span>Lang Sauna-Therm</span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna8.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Гималайская сауна</span>
+                        <span>65 м2</span>
+                        <span>IKI Pro</span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna9.jpg" alt="">
+                        <div class="counter-container">
+                            <div class="counter" data-toggle-like data-count="20">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.4832 1.33337C9.5765 1.33337 8.3665 3.43078 7.99984 4.19268C7.63317 3.43078 6.42317 1.33337 4.5165 1.33337C2.13317 1.33337 0.666504 3.42861 0.666504 5.33337C0.666504 7.23814 1.68317 8.81389 3.33317 10.3377C4.65317 11.5568 7.08317 13.9683 7.99984 14.6667C8.9165 13.9683 11.3465 11.5568 12.6665 10.3377C14.3165 8.81389 15.3332 7.23814 15.3332 5.33337C15.3332 3.42861 13.8665 1.33337 11.4832 1.33337Z"
+                                        fill="white" />
+                                </svg>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">
+                        <span>Сауна</span>
+                        <span>65 м2</span>
+                        <span>Helo Saunatonttu</span>
+                        <span>от 1 400 000 </span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="./img/sauna10.jpg" alt="">
+                    </div>
+                    <p class="title">
+                        <span>Нефритовая сауна</span>
+                        <span>65 м2</span>
+                        <span>IKI</span>
+                    </p>
+                    <p class="description">Москва, Termoland</p>
+                    <p class="description">Контакт Плюс</p>
+                </div>
+            </div>
+            <div class="filters">
+                <div class="filters-content">
+
+                    <div class="dropdown" data-filter-dropdown>
+                        <div class="head">
+                            <p>Компания</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)"
+                                    fill="white" />
+                                <path d="M13 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                        <div class="body">
+                            <div class="body-content">
+
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>95 градусов</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Контакт Плюс</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Твой пар</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>3D-сауна</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>IKI</p>
+                                </label>
+                                <div data-show-all>
+                                    <button class="like-a-link">Посмотреть все</button>
+                                </div>
+                                <label class="custom-checkbox disabled hide">
+                                    <input type="checkbox" disabled>
+                                    <span class="checkmark"></span>
+                                    <p>95 градусов</p>
+                                </label>
+                                <label class="custom-checkbox hide">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Контакт Плюс</p>
+                                </label>
+                                <label class="custom-checkbox hide">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Твой пар</p>
+                                </label>
+                                <label class="custom-checkbox hide">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>3D-сауна</p>
+                                </label>
+                                <label class="custom-checkbox hide">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>IKI</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown" data-filter-dropdown>
+                        <div class="head">
+                            <p>Цена</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)"
+                                    fill="white" />
+                                <path d="M13 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                        <div class="body">
+                            <div class="body-content">
+
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>до 10 000 ₽</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>10 001 – 30 000 ₽</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>30 001 – 50 000 ₽</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>50 000 ₽ и более</p>
+                                </label>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown" data-filter-dropdown>
+                        <div class="head">
+                            <p>Обьем</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)"
+                                    fill="white" />
+                                <path d="M13 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                        <div class="body">
+                            <div class="body-content">
+
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>до 20 кВт</p>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>10–20 кВт</p>
+                                </label>
+                                <label class="custom-checkbox disabled ">
+                                    <input type="checkbox" disabled>
+                                    <span class="checkmark"></span>
+                                    <p>20–30 кВт </p>
+                                </label>
+                                <label class="custom-checkbox disabled ">
+                                    <input type="checkbox" disabled>
+                                    <span class="checkmark"></span>
+                                    <p>30 кВт и более </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown" data-filter-dropdown>
+                        <div class="head">
+                            <p>Объем парной</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)"
+                                    fill="white" />
+                                <path d="M13 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+                    <div class="dropdown" data-filter-dropdown>
+                        <div class="head">
+                            <p>Управление</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)"
+                                    fill="white" />
+                                <path d="M13 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                        <div class="body">
+                        </div>
+                    </div>
+                    <div class="dropdown" data-filter-dropdown>
+                        <div class="head">
+                            <p>Установка</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)"
+                                    fill="white" />
+                                <path d="M13 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 10L8 5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                        <div class="body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="bttn-gray-filled button-more">Показать еще</button>
+        <div class="pagination">
+            <div class="pagination-button active">1</div>
+            <div class="pagination-button">2</div>
+            <div class="pagination-button">3</div>
+            <div class="pagination-button">4</div>
+            <div class="pagination-button">5</div>
+            <div class="pagination-button">6</div>
+            <div class="pagination-button empty">...</div>
+            <div class="pagination-button">99</div>
+            <div class="pagination-button">100</div>
+        </div>
+    </div>
+</section>
+       
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

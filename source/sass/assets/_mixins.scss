@@ -1,0 +1,197 @@
+// MEDIA
+$mobile_s: 321px;
+$mobile_m: 376px;
+$mobile: 560px;
+$tablet_s: 600px;
+$tablet_m: 650px;
+$tablet: 769px;
+$desctop_xs: 993px;
+$desctop_s: 1201px;
+$desctop_xm: 1441px;
+$desctop_m: 1700px;
+$desctop_l: 1921px;
+$desctop_4k: 2561px;
+
+@mixin media($media) {
+  @if $media == mobile_s {
+    @media only screen and (max-width: $mobile_s) {
+      @content;
+    }
+  } @else if $media == mobile_m {
+    @media only screen and (max-width: $mobile_m) {
+      @content;
+    }
+  } @else if $media == mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  } @else if $media == tablet_s {
+    @media only screen and (max-width: $tablet_s) {
+      @content;
+    }
+  } @else if $media == tablet_m {
+    @media only screen and (max-width: $tablet_m) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $media == desctop_xs {
+    @media only screen and (max-width: $desctop_xs) {
+      @content;
+    }
+  } @else if $media == desctop_s {
+    @media only screen and (max-width: $desctop_s) {
+      @content;
+    }
+  } @else if $media == desctop_xm {
+    @media only screen and (max-width: $desctop_xm) {
+      @content;
+    }
+  } @else if $media == desctop_m {
+    @media only screen and (max-width: $desctop_m) {
+      @content;
+    }
+  } @else if $media == desctop_l {
+    @media only screen and (max-width: $desctop_l) {
+      @content;
+    }
+  } @else if $media == desctop_4k {
+    @media only screen and (max-width: $desctop_4k) {
+      @content;
+    }
+  } @else if $media == port {
+    @media only screen and (orientation: portrait) {
+      @content;
+    }
+  } @else if $media == land {
+    @media only screen and (orientation: landscape) {
+      @content;
+    }
+  } @else if $media == ie {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  } @else if $media == h600 {
+    @media screen and (max-height: 600px) {
+      @content;
+    }
+  }
+}
+
+@mixin set_font($font) {
+  font-family: $font, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+// flex-direction || justify-content || align-items
+@mixin flex($fd: r, $jc: fs, $ai: fs, $fw: none) {
+  display: flex;
+  @if $fd == r {
+    flex-direction: row;
+  } @else if $fd == rr {
+    flex-direction: row-reverse;
+  } @else if $fd == c {
+    flex-direction: column;
+  } @else if $fd == cr {
+    flex-direction: column-reverse;
+  } @else {
+    flex-direction: $fd;
+  }
+
+  @if $jc == none {
+  } @else if $jc == fs {
+    justify-content: flex-start;
+  } @else if $jc == fe {
+    justify-content: flex-end;
+  } @else if $jc == c {
+    justify-content: center;
+  } @else if $jc == sb {
+    justify-content: space-between;
+  } @else if $jc == sa {
+    justify-content: space-around;
+  } @else {
+    justify-content: $jc;
+  }
+
+  @if $ai == none {
+  } @else if $ai == fs {
+    align-items: flex-start;
+  } @else if $ai == c {
+    align-items: center;
+  } @else if $ai == fe {
+    align-items: flex-end;
+  } @else if $ai == st {
+    align-items: stretch;
+  } @else {
+    align-items: $ai;
+  }
+
+  @if $fw == none {
+  } @else if $fw == w {
+    flex-wrap: wrap;
+  } @else if $fw == nw {
+    flex-wrap: nowrap;
+  } @else {
+    flex-wrap: $fw;
+  }
+  @content;
+}
+
+@mixin fa($el, $font) {
+  @if $el == "before" or $el == "after" {
+    &:#{$el} {
+      @if $font == s {
+        font-family: FASolid;
+      } @else if $font == r {
+        font-family: FARegular;
+      } @else if $font == b {
+        font-family: FABrands;
+      } @else if $font == d {
+        font-family: FADuotone;
+      } @else if $font == l {
+        font-family: FALight;
+      } @else {
+        font-family: FASolid;
+      }
+      @content;
+    }
+  }
+}
+
+@mixin trans($el: all, $dur: 0.3s, $arg: ease-in-out) {
+  @if $el == "none" {
+    transition: none;
+  } @else {
+    transition: $el $dur $arg;
+  }
+}
+@mixin wrap($lines: 1, $fs: 1rem, $lh: 1.2, $autoheight: false) {
+  font-size: $fs;
+  line-height: $lh;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  @if $autoheight == true {
+    max-height: calc(#{$fs} * #{$lh} * #{$lines} - 1px);
+  } @else {
+    height: calc(#{$fs} * #{$lh} * #{$lines} - 1px);
+  }
+  @content;
+}
+
+@mixin bg($url: none, $size: cover, $position: center, $repeat: no-repeat) {
+  @if $url != none {
+    background-image: url(#{$url});
+  }
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+  @content;
+}

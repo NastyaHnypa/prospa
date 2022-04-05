@@ -1,0 +1,58 @@
+$img_src: "../img/";
+$fonts_src: "../fonts/";
+
+@import "outside/_swiper-5.3.6.min.scss";
+// @import "outside/_animate.min.scss";
+// @import "outside/_aos.scss";
+@import "outside/_OverlayScrollbars.scss";
+@import "outside/_ion.rangeSlider.scss";
+
+@import "assets/_variables.scss";
+@import "assets/_mixins.scss";
+@import "assets/_default.scss";
+@import "assets/_normalize.scss";
+@import "assets/_fonts.scss";
+@import "assets/_main.scss";
+
+@import "components/_filters.scss";
+
+@import "modules/_header.scss";
+// @import "modules/_footer.scss";
+// @import "modules/_brands.scss";
+// @import "modules/_copyright_info.scss";
+
+// index
+// @import "pages/_index.scss";
+@import "sections/_catalog.scss";
+// @import "sections/_propositions.scss";
+// @import "modules/_categories_slider.scss";
+// @import "modules/_bottom.scss";
+// @import "modules/_subcategories_slider.scss";
+// @import "sections/_index_sale.scss";
+// @import "sections/_small_slider.scss";
+// @import "sections/_baners.scss";
+
+//catalog
+// @import "sections/_main_catalog.scss";
+// @import "sections/_catalog_categories.scss";
+
+//components
+// @import "components/product_slider";
+// @import "components/product_item";
+
+//blog
+// @import "sections/_blog_main.scss";
+// @import "sections/_text_blog.scss";
+
+//blogall
+// @import "sections/_text_blog_all.scss";
+
+//delivery
+// @import "sections/_content.scss";
+
+//basket
+// @import "sections/_basket_content.scss";
+
+//products
+// @import "sections/_products_main.scss";
+// @import "sections/_products_content.scss";

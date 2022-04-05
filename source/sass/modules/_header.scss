@@ -1,0 +1,87 @@
+header {
+    background-color: white;
+    height: 72px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+    .container {
+        height: 100%;
+        @include flex(r, sb, c);
+
+        .header-container__left {
+            @include flex(r, fs, c);
+
+            .logo {
+                display: block;
+                margin-right: 64px;
+            }
+
+            .header-links {
+                @include flex(r, fs, c);
+
+                .link {
+                    margin-right: 32px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.active a {
+                        color: $active;
+                    }
+
+                    a {
+                        @include trans(color);
+
+                        &:hover {
+                            color: $active;
+                        }
+                    }
+                }
+
+                .link__more {
+                    @include flex(r, fs, c);
+                    margin-left: -8px;
+                    cursor: pointer;
+
+                    p {
+                        color: #AFB3BB;
+                        font-weight: 600;
+                        margin-right: 7px;
+                        @include trans(color);
+                    }
+
+                    svg path {
+                        @include trans(stroke);
+                    }
+
+                    &:hover {
+                        p {
+                            color: $active;
+                        }
+
+                        svg path {
+                            stroke: $active;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-container__right {
+            @include flex(r, fs, c);
+
+            .icon-container {
+                @include flex(c, c, c);
+                width: 24px;
+                height: 24px;
+                margin-right: 24px;
+                cursor: pointer;
+            }
+
+            button {
+                &.bttn-blue {
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+}

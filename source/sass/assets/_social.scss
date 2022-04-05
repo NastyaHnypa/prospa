@@ -1,0 +1,123 @@
+$social_size: 34px;
+$social_text_color: #8e8f8f;
+$social_text_hover_color: white;
+$social_global_color_need: true;
+$social_global_color: transparent;
+$social_border_need: false;
+$social_border_color: transparent;
+$social_border_hover_color: white;
+
+$social_items_list: (
+  (vk, #2f68b1, \f189),
+  /* https://vk.com/`login` */ (fb, #174889, \f39e),
+  /* https://facebook.com/`login` */ (ok, #ff8b00, \f263),
+  /* https://ok.ru/`login` */ (tw, #1dadea, \f099),
+  /* https://twitter.com/`login` */ (tg, #61a8de, \f3fe),
+  /* https://t.me/`login` */ (ig, #d82a96, \f16d),
+  /* https://www.instagram.com/`login` */ (yt, #c4302b, \f167),
+  /* https://www.youtube.com/channel/`login` */ (wa, #3ac448, \f232),
+  /* whatsapp://send?phone=%2B`37369262989` */ (vi, #59267c, \f409),
+  /* viber://add?number=`37369262989` */ (ma, #f2f2f2, \f0e0)
+    /* mailto:`mail` */
+);
+
+$social_text_size: $social_size / 1.84;
+$social_text_size: 16px;
+
+.s_i_c {
+  @include flex(r, sb, fs);
+  a {
+    text-decoration: none;
+  }
+  .s_i {
+    @include trans();
+    width: $social_size;
+    height: $social_size;
+    @if $social_global_color_need {
+      background-color: $social_global_color !important;
+    }
+    @if $social_border_need {
+      border: 1px solid $social_border_color;
+    }
+
+    // change here \/
+    @include flex(r, c, c);
+    border-radius: 100%;
+    position: relative;
+    //  change here /\
+    &:hover {
+      &::before {
+        color: $social_text_hover_color;
+      }
+      @if $social_border_need {
+        border-color: $social_border_hover_color;
+      }
+    }
+    &::before {
+      content: "";
+      font-family: FABrands;
+      font-size: $social_text_size;
+      line-height: 1;
+      color: $social_text_color;
+      text-decoration: none;
+      @include trans();
+    }
+    @each $label, $color, $code in $social_items_list {
+      @if $label == ma {
+        &.#{$label} {
+          background-color: $color;
+          border: 2px solid #f14336;
+          width: $social_size - 2px;
+          height: $social_size - 2px;
+          &::before {
+            content: unquote('"#{ $code }"');
+            color: #f14336;
+            font-family: FARegular;
+          }
+        }
+      } @else {
+        &.#{$label} {
+          background-color: $color;
+          &::before {
+            content: unquote('"#{ $code }"');
+          }
+        }
+      }
+    }
+  }
+}
+
+// HTML example
+
+/*<div class="s_i_c">
+  <a target="_blank" href="https://vk.com/baicov">
+    <div class="s_i vk"></div>
+  </a>
+  <a target="_blank" href="https://facebook.com/enj_dev">
+    <div class="s_i fb"></div>
+  </a>
+  <a target="_blank" href="https://ok.ru/enj_dev">
+    <div class="s_i ok"></div>
+  </a>
+  <a target="_blank" href="https://twitter.com/enj_dev">
+    <div class="s_i tw"></div>
+  </a>
+  <a target="_blank" href="https://t.me/enj_dev">
+    <div class="s_i tg"></div>
+  </a>
+  <a target="_blank" href="https://www.instagram.com/enj_dev">
+    <div class="s_i ig"></div>
+  </a>
+  <a target="_blank" href="https://www.youtube.com/channel/enj_dev">
+    <div class="s_i yt"></div>
+  </a>
+  <a href="whatsapp://send?phone=%2B37369262989">
+    <div class="s_i wa"></div>
+  </a>
+  <a href="viber://add?number=37369262989">
+    <div class="s_i vi"></div
+  ></a>
+  <a href="mailto:baicov.andrey@gmail.com">
+    <div class="s_i ma"></div
+  ></a>
+</div>*/
